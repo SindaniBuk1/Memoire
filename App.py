@@ -5,7 +5,6 @@ import plotly.express as px
 import pandas as pd
 from math import *
 from sympy import *
-from PIL import Image
 #@st.cache
 
 def mc_moy(f,a,b,N):
@@ -139,16 +138,6 @@ elif dimension==5:
 		I,df=mc_5d(f,iterations)
 		txt="\iint \iiint_{[0,1]^{ "+str(dimension)+"}}"+"("+latex(sympify(fct.lower()))+")dxdydzdtdu="+str(I)
 		st.latex(txt)
-image=Image.open('IMG_3269.JPG')
-st.sidebar.image(
-    image,
-    caption="Auteur",
-    width=300,
-    use_column_width=None,
-    clamp=True,
-    channels='RGB',
-    output_format='auto',
-)
 
 		# x,y=df[0],df[1]
 		# z=f(x,y)
